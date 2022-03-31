@@ -1,0 +1,154 @@
+.Button {
+  background-color: transparent;
+  color: var(--foreground);
+
+  cursor: pointer;
+
+  position: relative;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 4px;
+
+  box-sizing: border-box;
+
+  gap: 8px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-radius: inherit;
+
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color;
+  }
+
+  &.Button_active:before,
+  &[disabled]:before,
+  &:hover:before {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+
+  &.Button_active,
+  &[disabled],
+  &:active {
+    box-shadow: var(--shadow-inset);
+    & > span {
+      transform: scale(0.95);
+    }
+  }
+}
+
+.Button[disabled] {
+  cursor: not-allowed;
+}
+
+.Button_loading[disabled],
+.Button_loading {
+  cursor: progress;
+}
+
+.Button_primary,
+.Button_secondary,
+.Button_error,
+.Button_warning,
+.Button_info,
+.Button_success {
+  --button-color: var(--normalBlack);
+}
+
+.Button_primary {
+  --button-background-color: var(--primary);
+}
+
+.Button_secondary {
+  --button-background-color: var(--secondary);
+}
+
+.Button_success {
+  --button-background-color: var(--green);
+}
+
+.Button_info {
+  --button-background-color: var(--blue);
+}
+
+.Button_warning {
+  --button-background-color: var(--yellow);
+}
+
+.Button_error {
+  --button-background-color: var(--red);
+}
+
+.Button_contained {
+  background-color: var(--button-background-color);
+  color: var(--button-color);
+
+  box-shadow: var(--shadow);
+}
+
+.Button_outlined {
+  background-color: transparent;
+  color: var(--button-background-color);
+  border: 1px solid var(--button-background-color);
+}
+
+.Button_text {
+  background-color: transparent;
+  color: var(--button-background-color);
+}
+
+.Button_fullWidth {
+  width: 100%;
+}
+
+.Button_small {
+  height: 30px;
+  min-width: 60px;
+
+  font-size: 14px;
+
+  padding: 0 12px;
+
+  & svg {
+    font-size: 20px;
+  }
+}
+
+.Button_medium {
+  height: 35px;
+  min-width: 80px;
+
+  font-size: 16px;
+
+  padding: 0 14px;
+
+  & svg {
+    font-size: 20px;
+  }
+}
+
+.Button_large {
+  height: 40px;
+  min-width: 100px;
+
+  font-size: 18px;
+
+  padding: 0 16px;
+
+  & svg {
+    font-size: 20px;
+  }
+}

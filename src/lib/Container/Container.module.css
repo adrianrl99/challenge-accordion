@@ -1,0 +1,33 @@
+.Container {
+  max-width: 100%;
+  width: 100%;
+  padding: 32px;
+  margin: 0 auto;
+  transition: max-width 0.25s ease-in-out;
+}
+
+@media screen and (min-width: 576px) {
+  .Container {
+    max-width: 540px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .Container {
+    max-width: 720px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .Container {
+    max-width: 960px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .Container {
+    max-width: 1140px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .Container {
+    max-width: 1320px;
+  }
+}

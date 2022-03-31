@@ -1,0 +1,33 @@
+.Divider {
+  background-color: var(--divider-color);
+}
+
+.Divider_horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.Divider_vertical {
+  height: 100%;
+  width: 1px;
+}
+
+.Divider_success {
+  --divider-color: var(--green);
+}
+
+.Divider_info {
+  --divider-color: var(--blue);
+}
+
+.Divider_warning {
+  --divider-color: var(--yellow);
+}
+
+.Divider_error {
+  --divider-color: var(--red);
+}
+
+.Divider_primary {
+  --divider-color: var(--foreground);
+}

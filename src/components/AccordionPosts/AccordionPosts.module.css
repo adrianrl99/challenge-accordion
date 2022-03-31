@@ -1,0 +1,21 @@
+.AccordionPosts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.AccordionPosts_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.AccordionPosts_actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.AccordionPosts_header_actions {
+  display: flex;
+  gap: 8px;
+}

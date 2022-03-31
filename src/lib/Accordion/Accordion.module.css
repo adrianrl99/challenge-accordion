@@ -1,0 +1,63 @@
+.Accordion {
+  padding: 0;
+  transition: margin 0.2s ease-in-out;
+}
+
+.Accordion_title {
+  cursor: pointer;
+  padding: 16px;
+  background-color: transparent;
+  color: var(--foreground);
+  font-size: 18px;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border-radius: inherit;
+
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color;
+  }
+
+  &.Button_active:before,
+  &[disabled]:before,
+  &:hover:before {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+}
+
+.Accordion_expanded {
+  box-shadow: var(--shadow-inset);
+  margin: 16px 0;
+
+  & .Accordion_body {
+    margin: 16px;
+    padding: 16px;
+    border-top: 1px solid var(--yellow);
+    max-height: 1000px;
+  }
+}
+
+.Accordion_body {
+  display: flex;
+  margin: 0 16px;
+  border-top: 1px solid var(--yellow);
+  padding: 0 16px;
+  overflow: hidden;
+  max-height: 0;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.25s;
+  transition-properties: padding, margin, max-height;
+}
