@@ -26,3 +26,4 @@ dist-ssr
 .npmrc
 yarn.lock
 *.css.d.ts
+.vercel
